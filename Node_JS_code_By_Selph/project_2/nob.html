@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Bar Website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="style2.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .user-img {
+            width: 50px;
+            border-radius: 100%;
+            border: 1px solid #eee;
+        }
+
+        .sidebar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 80px;
+            background-color: #12171e;
+            padding: .4rem .8rem;
+            transition: all 0.5s ease;
+        }
+
+        .sidebar.active {
+            width: 250px;
+        }
+
+        .main-content {
+            transition: all 0.5s ease;
+            margin-left: 80px;
+            /* Adjusted initial margin to match sidebar width */
+        }
+
+        .sidebar.active+.main-content {
+            margin-left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+
+        <!-- Your existing sidebar content -->
+
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <h1>Code Commerce</h1>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function () {
+            sidebar.classList.toggle('active');
+
+            // Toggle other elements accordingly
+            let mainContent = document.querySelector('.main-content');
+            mainContent.classList.toggle('active');
+            // Add more elements if needed and toggle their 'active' class
+        };
+    </script>
+</body>
+
+</html>

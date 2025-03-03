@@ -1,0 +1,1 @@
+this is dynamic content for writing file by js into file

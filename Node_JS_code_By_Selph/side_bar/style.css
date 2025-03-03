@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-img {
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid #eee;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #12171e;
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.main-content {
+    transition: all 0.5s ease;
+    margin-left: 80px;
+    /* Adjusted initial margin to match sidebar width */
+}
+
+.sidebar.active+.main-content {
+    margin-left: 250px;
+}
+
+
+#btn {
+    position: absolute;
+    color: #fff;
+    top: .4rem;
+    left: 50%;
+    /*******/
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+/* to hinde the side bar title */
+.top .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+
+    /* Center the content horizontally */
+    pointer-events: none;
+    opacity: 0;
+
+}
+
+/* to show the side br */
+.sidebar.active .top .logo {
+    opacity: 1;
+
+
+    /* Adjust the left position based on your design */
+}
+
+.top.log i {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.user p {
+
+    opacity: 0;
+
+}
+
+.sidebar.active .user p {
+    display: flex;
+    align-items: left;
+    margin-left: 0rem;
+    opacity: 1;
+    color: white;
+    margin-left: 1rem;
+}
+
+.bold {
+    font-weight: 600px;
+}
+
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+
+/* desing the a tag */
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+
+}
+
+.sidebar ul li a :hover {
+    background-color: #fff;
+    color: #12171e;
+
+}
+
+
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+
+}
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+
+.sidebar.active .nav-item {
+    opacity: 1;
+}
+
+/* this is for tooltip of li */
+.sidebar ul li .tooltrip {
+
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+
+}
+
+.sidebar ul li:hover .tooltrip {
+
+    opacity: 1;
+
+}
+
+.sidebar.active ul li .tooltrip {
+    display: none;
+}

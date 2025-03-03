@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>side bar website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <div class="top">
+
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+                <span>Course Title</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+
+        </div>
+        <div class="user">
+
+            <img src="https://cdn.vox-cdn.com/thumbor/0Mr0MBSIab2Nu5T8KswubQ8FBmA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13459323/Avatar_Customization_3_1542670378.jpg"
+                alt="me" class="user-img">
+            <div>
+                <p class="bold">Ritik Sharma</p>
+                <p>Admin</p>
+            </div>
+
+
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="nav-item">DashBoard</span>
+                </a>
+                <span class="tooltrip">DashBoard</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="nav-item">products</span>
+                </a>
+                <span class="tooltrip">products</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="nav-item">categories</span>
+                </a>
+                <span class="tooltrip">categories</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="nav-item">orders</span>
+                </a>
+                <span class="tooltrip">orders</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="nav-item">customers</span>
+                </a>
+                <span class="tooltrip">customers</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bx-log-in"></i>
+                    <span class="nav-item">login</span>
+                </a>
+                <span class="tooltrip">login</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bx-log-out"></i>
+                    <span class="nav-item">logout</span>
+                </a>
+                <span class="tooltrip">logout</span>
+            </li>
+        </ul>
+    </div>
+
+    <!--      -->
+    <div class="main-content">
+        <div class="container">
+            <h1>Code Commerce</h1>
+            <h1> Code CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode Commerce
+                Code CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode Commerce
+                Code CommerceCode CommerceCode CommerceCode CommerceCode Commerce
+                Code CommerceCode CommerceCode CommerceCode Commerce
+                Code CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode
+                CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode Commerce
+                Code CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode CommerceCode
+                CommerceCode Commerce
+                Code Commerce
+            </h1>
+
+            <div id="botpress-container"></div>
+
+            <script
+                src="https://mediafiles.botpress.cloud/4a9a131e-8e69-4f0a-9118-21d40c3f0b75/webchat/bot.html"></script>
+            <script>
+                // Initialize and configure Botpress
+                // Example: replace 'your-bot-id' with the actual ID of your bot
+                Botpress.init({
+                    botId: 'bp_pat_ZzubYdBfq9of9ONZWScPWqI3zlM0rpSFdEWp',
+                    target: 'botpress-container'
+                });
+            </script>
+        </div>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+
+        // Toggle other elements accordingly
+        let mainContent = document.querySelector('.main-content');
+        mainContent.classList.toggle('active');
+        // Add more elements if needed and toggle their 'active' class
+    };
+
+
+
+
+
+</script>
+
+
+</html>
