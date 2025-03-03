@@ -1,0 +1,94 @@
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzA4MTYxOTQ0fQ.GOSL0bkeL-MMz6WOfW4uR0XOhdifNc9wGPDBKNyArU8
+####
+
+### accessing the states details with Authorization---
+GET http://localhost:3000/states/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzA4MTYxOTQ0fQ.GOSL0bkeL-MMz6WOfW4uR0XOhdifNc9wGPDBKNyArU8
+
+
+
+####  accessing the states details without Authorization---
+GET http://localhost:3000/states/12
+Authorization: 
+
+
+#### /states/:stateId/stats/ to get statistical
+### api-8
+GET http://localhost:3000/states/12/stats/
+Authorization: 
+
+
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{    
+    "username": "rahul124",
+    "password": "rahul@456",
+    "gender":"male",
+    "location":"hyderabad"
+}
+
+###
+
+### for login API -1 
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+####----------------------------------
+
+GET http://localhost:3000/books/?search=ritik_book
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzA4MTYxOTQ0fQ.GOSL0bkeL-MMz6WOfW4uR0XOhdifNc9wGPDBKNyArU8
+
+###
+
+GET http://localhost:3000/books/1/
+
+###
+
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{    
+    "username": "rahul123",
+    "password": "rahul@456",
+    "gender":"male",
+    "location":"hyderabad"
+}
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{    
+    "username": "rahul123",
+    "password": "rahul@456"
+}
+
+
+### 
+## API-4 districts
+
+POST http://localhost:3000/districts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzA4MTYxOTQ0fQ.GOSL0bkeL-MMz6WOfW4uR0XOhdifNc9wGPDBKNyArU8
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+### '/districts/:districtId/'
+
+GET http://localhost:3000/districts/7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzA4MTYxOTQ0fQ.GOSL0bkeL-MMz6WOfW4uR0XOhdifNc9wGPDBKNyArU8

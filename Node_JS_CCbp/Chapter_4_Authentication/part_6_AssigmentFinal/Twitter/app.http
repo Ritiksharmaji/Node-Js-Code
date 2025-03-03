@@ -1,0 +1,26 @@
+### API-1 register
+
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+
+### API-2  login 
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+
+##/user/tweets/
+
+
+### API-2  login 
+GET http://localhost:3000/user/tweets/
