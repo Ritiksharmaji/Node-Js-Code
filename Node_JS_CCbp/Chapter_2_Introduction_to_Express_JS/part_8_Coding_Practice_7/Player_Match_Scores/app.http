@@ -1,0 +1,39 @@
+GET http://localhost:3000/players/
+
+###
+
+GET http://localhost:3000/players/2/
+
+###
+
+PUT http://localhost:3000/players/2/
+Content-Type: application/json
+
+{
+  "playerName": "Maneesh"
+}
+
+
+### API-4 /matches/:matchId/
+GET http://localhost:3000/matches/3/
+
+
+### API-5  /players/:playerId/matches
+GET http://localhost:3000/players/4/matches
+
+
+### API-6 /matches/:matchId/players
+GET http://localhost:3000/matches/4/players
+
+### API-7 /players/:playerId/playerScores
+GET http://localhost:3000/players/3/playerScores
+
+
+POST http://localhost:3000/player/
+Content-Type: application/json
+
+{
+  "playerName": "Vishal",
+  "jerseyNumber": 17,
+  "role": "Bowler"
+}
